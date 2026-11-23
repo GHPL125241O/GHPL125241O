@@ -1,0 +1,11 @@
+{
+  "_readme": "Source of truth for the 'Spirits Banished' chart. One entry per completed CTF challenge or machine. `difficulty` is one of easy, medium, hard, insane. `points` is optional. Entries with \"sample\": true are demo data: delete them with `python scripts/log.py clear-samples`.",
+  "entries": [
+    { "date": "2026-11-11", "platform": "TryHackMe", "name": "[SAMPLE] Easy Web Room", "difficulty": "easy", "category": "Web", "points": 20, "sample": true },
+    { "date": "2026-11-13", "platform": "HackTheBox", "name": "[SAMPLE] Starter Machine", "difficulty": "easy", "category": "Linux", "points": 20, "sample": true },
+    { "date": "2026-11-14", "platform": "picoCTF", "name": "[SAMPLE] Caesar Cipher", "difficulty": "easy", "category": "Crypto", "points": 10, "sample": true },
+    { "date": "2026-11-16", "platform": "HackTheBox", "name": "[SAMPLE] Medium Box", "difficulty": "medium", "category": "Active Directory", "points": 30, "sample": true },
+    { "date": "2026-11-18", "platform": "CTFtime", "name": "[SAMPLE] Forensics Challenge", "difficulty": "medium", "category": "Forensics", "points": 150, "sample": true },
+    { "date": "2026-11-19", "platform": "TryHackMe", "name": "[SAMPLE] Hard Room", "difficulty": "hard", "category": "Web", "points": 50, "sample": true }
+  ]
+}

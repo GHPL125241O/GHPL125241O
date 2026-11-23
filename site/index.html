@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPHL125241O | The Ghost of Hacking | Pentester &amp; Red Teamer</title>
+  <meta name="description" content="GPHL125241O, The Ghost of Hacking. Penetration tester and red teamer. Training progress, CTF stats and write-ups from Ghost Protocol Labs.">
+  <meta name="theme-color" content="#0b0d10">
+  <meta name="color-scheme" content="dark">
+  <!-- TODO: if you add a custom domain, update the three absolute URLs below (canonical, og:url, og:image) -->
+  <link rel="canonical" href="https://gphl125241o.github.io/GPHL125241O/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GPHL125241O">
+  <meta property="og:title" content="GPHL125241O | The Ghost of Hacking">
+  <meta property="og:description" content="Pentester and red teamer. Training progress, CTF stats and write-ups, straight from the graveyard.">
+  <meta property="og:url" content="https://gphl125241o.github.io/GPHL125241O/">
+  <meta property="og:image" content="https://gphl125241o.github.io/GPHL125241O/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="GPHL125241O, The Ghost of Hacking, in a moonlit graveyard with floating ghosts.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GPHL125241O | The Ghost of Hacking">
+  <meta name="twitter:description" content="Pentester and red teamer. Training progress, CTF stats and write-ups, straight from the graveyard.">
+  <meta name="twitter:image" content="https://gphl125241o.github.io/GPHL125241O/assets/og-image.png">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&amp;family=Pirata+One&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- shared SVG definitions (ghost shape, glow, gradients) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      <linearGradient id="areaG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#39ff9c" stop-opacity="0.36"/><stop offset="1" stop-color="#39ff9c" stop-opacity="0"/></linearGradient>
+      <linearGradient id="ghostG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4fffb"/><stop offset="1" stop-color="#bfe9dc" stop-opacity="0.6"/></linearGradient>
+      <symbol id="gh" viewBox="0 0 56 72">
+        <path d="M28 2C13 2 4 14 4 30v34c0 4 4 5 6.500 2L15 61l5 7 5-6 3 5 3-5 5 6 5-7 4.500 5c2.500 3 6.500 2 6.500-2V30C52 14 43 2 28 2Z" fill="url(#ghostG)"/>
+        <ellipse cx="20" cy="31" rx="4" ry="6" fill="#0b0d10"/><ellipse cx="36" cy="31" rx="4" ry="6" fill="#0b0d10"/>
+        <circle cx="21" cy="29" r="1.300" fill="#39ff9c"/><circle cx="37" cy="29" r="1.300" fill="#39ff9c"/>
+        <ellipse cx="28" cy="46" rx="3.600" ry="5" fill="#0b0d10" opacity="0.85"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- atmosphere: purely decorative, filled in by js/main.js -->
+  <div class="scene" aria-hidden="true">
+    <div class="stars" id="stars"></div>
+    <div class="moon"><i></i></div>
+    <div class="fog fog--1"></div>
+    <div class="fog fog--2"></div>
+    <div class="fog fog--3"></div>
+    <div class="ghosts" id="ghosts"></div>
+  </div>
+
+  <header class="nav" id="top">
+    <a class="brand" href="#hero" aria-label="GPHL125241O, back to the top">
+      <svg width="22" height="28" viewBox="0 0 56 72" aria-hidden="true"><use href="#gh"/></svg>
+      <span>GPHL125241O</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#arsenal">Arsenal</a></li>
+        <li><a href="#activity">Activity</a></li>
+        <li><a href="#labs">Labs</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="lantern lantern--l" aria-hidden="true"><svg viewBox="0 0 40 150"><line x1="20" y1="0" x2="20" y2="62" stroke="#26303a" stroke-width="2"/><rect x="11" y="60" width="18" height="5" rx="1" fill="#26303a"/><path d="M14 65h12l3 7v30l-3 7H14l-3-7V72z" fill="#0d1217" stroke="#2a3641"/><ellipse class="flame" cx="20" cy="88" rx="4.500" ry="9" fill="#39ff9c"/><rect x="11" y="107" width="18" height="4" rx="1" fill="#26303a"/></svg><i class="lantern__glow"></i></div>
+      <div class="lantern lantern--r" aria-hidden="true"><svg viewBox="0 0 40 150"><line x1="20" y1="0" x2="20" y2="62" stroke="#26303a" stroke-width="2"/><rect x="11" y="60" width="18" height="5" rx="1" fill="#26303a"/><path d="M14 65h12l3 7v30l-3 7H14l-3-7V72z" fill="#0d1217" stroke="#2a3641"/><ellipse class="flame" cx="20" cy="88" rx="4.500" ry="9" fill="#8b5cf6"/><rect x="11" y="107" width="18" height="4" rx="1" fill="#26303a"/></svg><i class="lantern__glow lantern__glow--p"></i></div>
+
+      <div class="hero__inner reveal">
+        <p class="eyebrow">// pentester &amp; red teamer</p>
+        <h1 id="hero-title" class="glitch" data-text="GPHL125241O" aria-label="GPHL125241O">GPHL125241O</h1>
+        <p class="tagline">The Ghost of Hacking</p>
+        <p class="roles" aria-label="Roles: Penetration Tester, Red Team Operator, Active Directory Hunter, Exploit Whisperer, Haunter of Unpatched Servers, Ethical Poltergeist">
+          <span aria-hidden="true">&gt; <span id="role">Penetration Tester</span><span class="caret"></span></span>
+        </p>
+        <div class="cta">
+          <a class="btn btn--primary" href="https://github.com/Ghost-Protocol-Lab" rel="noopener">Ghost Protocol Labs</a>
+          <a class="btn" href="https://github.com/GPHL125241O" rel="noopener">GitHub profile</a>
+          <a class="btn" href="#connect">Summon me</a>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#about" aria-label="Scroll to About"><span></span></a>
+      <div class="graveyard" aria-hidden="true"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <h2 class="section-title reveal" id="about-title">From Beyond the Firewall</h2>
+        <p class="epitaph reveal">Here lies another unpatched server.</p>
+        <div class="about reveal">
+          <p>I'm GPHL125241O, a penetration tester and red teamer. I work in the gap between "it works" and "it's secure": enumerating, breaking, and then explaining exactly how to fix what I broke.</p>
+          <p>I run <a href="https://github.com/Ghost-Protocol-Lab" rel="noopener">Ghost Protocol Labs</a>, where we publish practical write-ups, plan events and share daily challenges for people learning offensive security. Everything I test is authorized, and everything I publish is meant to help defenders too.</p>
+        </div>
+        <!-- TODO: edit the skills below to match what you actually do -->
+        <div class="grid grid--skills">
+          <article class="card reveal"><h3>Web application pentesting</h3><ul><li>OWASP Top 10</li><li>Auth and session attacks</li><li>Injection: SQLi, XSS, SSTI</li><li>API security testing</li><li>Business logic flaws</li></ul></article>
+          <article class="card reveal"><h3>Network and infrastructure</h3><ul><li>Recon and enumeration</li><li>Service exploitation</li><li>Pivoting and tunneling</li><li>Traffic analysis</li></ul></article>
+          <article class="card reveal"><h3>Active Directory attacks</h3><ul><li>AD enumeration</li><li>Kerberos attacks</li><li>Credential abuse</li><li>Lateral movement</li></ul></article>
+          <article class="card reveal"><h3>Privilege escalation</h3><ul><li>Linux privilege escalation</li><li>Windows privilege escalation</li><li>Misconfiguration hunting</li></ul></article>
+          <article class="card reveal"><h3>Red team operations</h3><ul><li>Initial access tradecraft</li><li>Post-exploitation</li><li>C2 operations</li><li>Evasion concepts</li><li>Adversary emulation</li></ul></article>
+          <article class="card reveal"><h3>OSINT</h3><ul><li>Passive recon</li><li>Infrastructure mapping</li><li>Exposure and leak discovery</li></ul></article>
+          <article class="card reveal"><h3>Reporting</h3><ul><li>Clear technical write-ups</li><li>Risk rating and impact</li><li>Remediation guidance</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARSENAL -->
+    <section class="section" id="arsenal" aria-labelledby="arsenal-title">
+      <div class="wrap">
+        <h2 class="section-title reveal" id="arsenal-title">The Arsenal</h2>
+        <p class="epitaph reveal">Tools of the trade, sharpened in the dark.</p>
+        <!-- TODO: edit the tech stack to match what you actually use -->
+        <div class="stack reveal">
+          <div><h3>Offensive tools</h3><ul class="chips"><li>Burp Suite</li><li>Nmap</li><li>Metasploit</li><li>BloodHound</li><li>Impacket</li><li>Wireshark</li><li>ffuf</li><li>Hashcat</li><li>Sliver</li></ul></div>
+          <div><h3>Languages</h3><ul class="chips"><li>Python</li><li>Bash</li><li>PowerShell</li><li>C</li></ul></div>
+          <div><h3>OS and platforms</h3><ul class="chips"><li>Kali Linux</li><li>Windows</li><li>Docker</li><li>Git</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTIVITY -->
+    <section class="section" id="activity" aria-labelledby="activity-title">
+      <div class="wrap">
+        <h2 class="section-title reveal" id="activity-title">The Ledger of the Dead</h2>
+        <p class="epitaph reveal">Contributions, modules and CTFs. Updated every night at 00:05 IST.</p>
+
+        <article class="panel reveal" id="panel-contrib" aria-labelledby="contrib-title">
+          <header class="panel__head"><h3 id="contrib-title">Souls Contributed</h3><span class="panel__meta" id="contrib-meta"></span></header>
+          <div class="panel__body" id="contrib-body"><p class="muted">Loading the graveyard&hellip;</p></div>
+        </article>
+
+        <div class="duo">
+          <article class="panel reveal" id="panel-modules" aria-labelledby="modules-title">
+            <header class="panel__head"><h3 id="modules-title">Rituals Completed</h3><span class="panel__meta" id="modules-meta"></span></header>
+            <div class="panel__body" id="modules-body"><p class="muted">Loading&hellip;</p></div>
+          </article>
+          <article class="panel reveal" id="panel-ctfs" aria-labelledby="ctfs-title">
+            <header class="panel__head"><h3 id="ctfs-title">Spirits Banished</h3><span class="panel__meta" id="ctfs-meta"></span></header>
+            <div class="panel__body" id="ctfs-body"><p class="muted">Loading&hellip;</p></div>
+          </article>
+        </div>
+        <noscript><p class="muted">The charts need JavaScript. The same stats are on the <a href="https://github.com/GPHL125241O">GitHub profile</a>.</p></noscript>
+      </div>
+    </section>
+
+    <!-- GHOST PROTOCOL LABS -->
+    <section class="section" id="labs" aria-labelledby="labs-title">
+      <div class="wrap">
+        <h2 class="section-title reveal" id="labs-title">Ghost Protocol Labs</h2>
+        <p class="epitaph reveal">Our offensive security lab. Come haunt with us.</p>
+        <div class="labs reveal">
+          <p>Ghost Protocol Labs is an organization for penetration testing, red teaming and security research. We publish practical write-ups, organize events, and share daily challenges for people learning offensive security.</p>
+          <p><a class="btn btn--primary" href="https://github.com/Ghost-Protocol-Lab" rel="noopener">Visit Ghost Protocol Labs on GitHub</a></p>
+        </div>
+        <div class="grid grid--repos">
+          <a class="repo reveal" href="https://github.com/Ghost-Protocol-Lab/Damn_Practical_Write_Ups" rel="noopener"><h3>Damn_Practical_Write_Ups</h3><p>Practical write-ups across every field of cyber.</p></a>
+          <a class="repo reveal" href="https://github.com/Ghost-Protocol-Lab/Damn_Practical_Workflow" rel="noopener"><h3>Damn_Practical_Workflow</h3><p>How the organization operates.</p></a>
+          <a class="repo reveal" href="https://github.com/Ghost-Protocol-Lab/Damn_Practical_EventHub" rel="noopener"><h3>Damn_Practical_EventHub</h3><p>The events we organize.</p></a>
+          <a class="repo reveal" href="https://github.com/Ghost-Protocol-Lab/Damn_Practical_EventFinder" rel="noopener"><h3>Damn_Practical_EventFinder</h3><p>Find security events happening around the world.</p></a>
+          <a class="repo reveal" href="https://github.com/Ghost-Protocol-Lab/Damn_Practical_Activities" rel="noopener"><h3>Damn_Practical_Activities</h3><p>Daily activities and fun tasks to stay sharp.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONNECT -->
+    <section class="section" id="connect" aria-labelledby="connect-title">
+      <div class="wrap">
+        <h2 class="section-title reveal" id="connect-title">Let's Connect</h2>
+        <p class="epitaph reveal">Send a signal. The ghost will answer.</p>
+        <!-- TODO: replace every TODO_* link below. Cards whose link still contains TODO_ are hidden automatically. -->
+        <ul class="links reveal">
+          <li><a href="https://github.com/GPHL125241O" rel="noopener"><b>GitHub</b><span>@GPHL125241O</span></a></li>
+          <li><a href="https://github.com/Ghost-Protocol-Lab" rel="noopener"><b>Ghost Protocol Labs</b><span>Our organization</span></a></li>
+          <li><a href="TODO_LINKEDIN_URL" rel="noopener me"><b>LinkedIn</b><span>Professional network</span></a></li>
+          <li><a href="TODO_X_URL" rel="noopener me"><b>X</b><span>Short signals</span></a></li>
+          <li><a href="mailto:TODO_EMAIL"><b>Email</b><span>TODO_EMAIL</span></a></li>
+          <li><a href="TODO_TRYHACKME_URL" rel="noopener me"><b>TryHackMe</b><span>Rooms and paths</span></a></li>
+          <li><a href="TODO_HACKTHEBOX_URL" rel="noopener me"><b>HackTheBox</b><span>Machines and challenges</span></a></li>
+          <li><a href="TODO_DISCORD_URL" rel="noopener me"><b>Discord</b><span>Join the séance</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__rip">
+      <p class="footer__title">Rest in peace, vulnerabilities.</p>
+      <p class="muted">GPHL125241O &middot; The Ghost of Hacking &middot; <a href="https://github.com/Ghost-Protocol-Lab" rel="noopener">Ghost Protocol Labs</a></p>
+      <p class="muted small">All content is for education and authorized security testing only.</p>
+    </div>
+    <div class="graveyard graveyard--footer" aria-hidden="true"></div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

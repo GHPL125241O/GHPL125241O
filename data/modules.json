@@ -1,0 +1,13 @@
+{
+  "_readme": "Source of truth for the 'Rituals Completed' chart. One entry per completed module. Add entries by hand, with `python scripts/log.py module ...`, or from the Actions tab. Entries with \"sample\": true are demo data: delete them with `python scripts/log.py clear-samples`.",
+  "entries": [
+    { "date": "2026-11-10", "platform": "TryHackMe", "name": "[SAMPLE] Intro to Web Hacking", "category": "Web", "sample": true },
+    { "date": "2026-11-11", "platform": "TryHackMe", "name": "[SAMPLE] Nmap Basics", "category": "Network", "sample": true },
+    { "date": "2026-11-13", "platform": "HackTheBox", "name": "[SAMPLE] Linux Privilege Escalation", "category": "Linux", "sample": true },
+    { "date": "2026-11-14", "platform": "HackTheBox", "name": "[SAMPLE] Active Directory Enumeration", "category": "Active Directory", "sample": true },
+    { "date": "2026-11-15", "platform": "PortSwigger", "name": "[SAMPLE] SQL Injection Labs", "category": "Web", "sample": true },
+    { "date": "2026-11-17", "platform": "TryHackMe", "name": "[SAMPLE] Burp Suite Basics", "category": "Web", "sample": true },
+    { "date": "2026-11-18", "platform": "TryHackMe", "name": "[SAMPLE] Windows Fundamentals", "category": "Windows", "sample": true },
+    { "date": "2026-11-20", "platform": "PortSwigger", "name": "[SAMPLE] Access Control Labs", "category": "Web", "sample": true }
+  ]
+}
